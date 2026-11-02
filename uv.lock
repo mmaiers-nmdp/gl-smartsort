@@ -1,0 +1,23 @@
+version = 1
+revision = 2
+requires-python = ">=3.12"
+
+[[package]]
+name = "gl-smartsort"
+version = "0.2.0"
+source = { editable = "." }
+dependencies = [
+    { name = "glstring" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "glstring", specifier = ">=0.1.0" }]
+
+[[package]]
+name = "glstring"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1c/c1/a941885361e644b32a328e35e92236b494350ca3c9668c7341f659c1ad2b/glstring-0.1.0.tar.gz", hash = "sha256:1c1ab0d624d769b214fdf51bbe0b839cafd56a3a36b9b0f12a414dc761959bf1", size = 52196, upload-time = "2026-11-02T12:28:34.744Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ca/0c/95021578ad8b4a3a57bc1a9738c4527aeeab74fb40bf689b081bdaf0c999/glstring-0.1.0-py3-none-any.whl", hash = "sha256:768adf277c0f51598c8c124b8e135166f3aa24e4c8469ff1bd5406a3b49de117", size = 26785, upload-time = "2026-11-02T12:28:33.349Z" },
+]
