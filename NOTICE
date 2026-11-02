@@ -1,0 +1,17 @@
+gl-smartsort
+Copyright 2012 Martin J. Maiers and National Marrow Donor Program (NMDP)
+
+This product includes software developed by Martin J. Maiers.
+
+This package is a Python port of the original Perl implementation
+"SmartSort.pm" (dated 2012-11-14), authored by Martin J. Maiers.
+Both the original Perl implementation and this Python port were
+authored by the same copyright holder.
+
+The implementation uses only the Python standard library; it does not
+incorporate any third-party source code.
+
+Licensed under the Apache License, Version 2.0 (the "License").
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
