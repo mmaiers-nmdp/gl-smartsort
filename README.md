@@ -1,12 +1,17 @@
 # gl-smartsort
 
 A tiny Python package that canonicalizes **GL Strings** by *smart sorting*:
-- recursively sorts within delimiter levels in precedence: `^`, `|`, `+`, `~`, `/`
+- recursively sorts within delimiter levels in precedence: `?`, `^`, `|`, `+`, `~`, `/`
 - orders blocks by **gene/locus** (left of `*`)
 - orders alleles **numerically** (not lexically) within a locus (e.g., `A*01:11` before `A*01:103`)
-- strips suffixes for numeric comparison (e.g., `01:01N` compares as `01:01`)
+- breaks ties on expression suffixes deterministically (e.g., `A*01:01` before `A*01:01N`)
+- supports the GL String 1.1 `?` (possible gene locations) delimiter
 
-This is a Python port of `SmartSort.pm` (2012-11-14).
+As of v0.2.0, the sorting is performed by the standards-conformant
+[`glstring`](https://pypi.org/project/glstring/) library (GL String 1.1
+parser + AST); `gl-smartsort` is a thin wrapper that calls
+`glstring.smart_sort(gl, legacy=True)` to preserve the historical ordering
+convention. This package is a Python port of `SmartSort.pm` (2012-11-14).
 
 ## Install (local)
 
@@ -44,9 +49,10 @@ cat gl.txt | gl-smartsort
 
 This package is a Python port of the original Perl implementation
 `SmartSort.pm` (2012-11-14), authored by Martin J. Maiers. Both the original
-Perl implementation and this Python port were written by the same author. The
-implementation relies only on the Python standard library and incorporates no
-third-party source code.
+Perl implementation and this Python port were written by the same author. As of
+v0.2.0 the sorting is delegated to the independently developed, standards-
+conformant [`glstring`](https://pypi.org/project/glstring/) library (Apache-2.0);
+no third-party source code is vendored into this package.
 
 ## License
 

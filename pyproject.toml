@@ -4,10 +4,10 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gl-smartsort"
-version = "0.1.2"
+version = "0.2.0"
 description = "Smart-sort GL Strings into a canonical order."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
 authors = [
@@ -17,6 +17,9 @@ keywords = ["HLA", "GL string", "immunogenetics", "canonicalization", "sorting"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Operating System :: OS Independent",
+]
+dependencies = [
+  "glstring>=0.1.0",
 ]
 
 [project.urls]
