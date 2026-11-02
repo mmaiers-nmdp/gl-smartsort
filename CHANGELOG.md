@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-11-02
+
 ### Changed
 
 - Reconciled inconsistent licensing declarations and relicensed the project to
@@ -23,5 +25,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   (SPDX license expression and `license-files`), and removed the obsolete MIT
   classifier.
 - Updated `README.md` license references and added a provenance note.
+
+This is the first release published to PyPI, and its package metadata
+declares Apache-2.0.
 
 No functional changes were made to the sorting algorithm.
